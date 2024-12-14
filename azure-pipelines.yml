@@ -1,15 +1,10 @@
-trigger: none  # Disable CI trigger
-
-schedules:
-- cron: "0 */4 * * *"  # Runs every 4 hours
-  displayName: Scheduled build
-  branches:
-    include:
-    - main
-  always: true
+trigger:
+- main
 
 pool:
-  vmImage: ubuntu-latest
+  name: selfhostedpool
+  # Replace with your self-hosted agent pool name
+  # Remove vmImage since we're using self-hosted agent
 
 steps:
 - script: echo Hello, world!
@@ -19,3 +14,4 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
