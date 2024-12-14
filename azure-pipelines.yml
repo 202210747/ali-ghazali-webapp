@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  name: selfhostedpool
+  name: selfhosted
   # Replace with your self-hosted agent pool name
   # Remove vmImage since we're using self-hosted agent
 
